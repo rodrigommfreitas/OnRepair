@@ -12,11 +12,15 @@ export async function EmailList() {
 
   const emails = await client.fetch<EmailsQueryResult>(EmailsQuery);
 
+  function getMailToLink(email: string) {
+    return `mailto:${email}`;
+  }
+
   return (
     <ul className="space-y-1">
       {emails.map((email) => (
         <li key={email._id}>
-          <p>{email.emailAddress}</p>
+          <a href={getMailToLink(email.emailAddress!)}>{email.emailAddress}</a>
         </li>
       ))}
     </ul>
