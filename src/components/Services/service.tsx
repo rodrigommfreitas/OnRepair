@@ -17,7 +17,7 @@ export function Service({ title, description, icon: Icon }: ServiceProps) {
       <div
         onClick={() => setIsOpen(!isOpen)}
         aria-label={isOpen ? "Collapse" : "Expand"}
-        className="flex items-center justify-between hover:cursor-pointer hover:underline md:mb-4 md:hover:cursor-default md:hover:no-underline"
+        className="flex items-center justify-between hover:cursor-pointer md:mb-4 md:hover:cursor-default"
       >
         <div className="flex items-center">
           <Icon color="blue" size={32} className="mr-4 flex-shrink-0" />
