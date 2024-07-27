@@ -7,7 +7,7 @@ interface HeroButtonsProps {
 
 export function HeroButtons({ URL }: HeroButtonsProps) {
   return (
-    <div className="flex flex-col gap-2 min-[400px]:flex-row">
+    <div className="flex flex-row gap-2 min-[400px]:flex-row">
       <button
         className="inline-flex h-10 w-2/3 items-center justify-center rounded-md bg-primary px-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 sm:w-fit sm:px-8"
         onClick={(e) => {
