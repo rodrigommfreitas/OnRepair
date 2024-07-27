@@ -14,12 +14,18 @@ export async function PhoneNumberList() {
   const phoneNumbers =
     await client.fetch<PhoneNumbersQueryResult>(PhoneNumbersQuery);
 
+  function getTelLink(phoneNumber: string) {
+    return `tel:${phoneNumber}`;
+  }
+
   return (
     <ul className="flex flex-col items-start space-y-1">
       {phoneNumbers.map((phoneNumber) => (
         <li key={phoneNumber._id}>
-          <span className="mr-2">{phoneNumber.number}</span>
-          <span className="text-muted-foreground">{phoneNumber.store}</span>
+          <a href={getTelLink(phoneNumber.number!)}>
+            <span className="mr-2">{phoneNumber.number}</span>
+            <span className="text-muted-foreground">{phoneNumber.store}</span>
+          </a>
         </li>
       ))}
     </ul>
