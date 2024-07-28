@@ -1,4 +1,4 @@
-# [OnRepair](www.onrepair.vercel.app/)
+# [OnRepair](https://onrepair.vercel.app)
 
 ## About
 
